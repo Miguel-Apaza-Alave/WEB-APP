@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../../css/materialize.css">
+  <link rel="stylesheet" href="../../css/nouislider.css">
+	<link rel="stylesheet" href="../../iconfont/material-icons.css">
+	<link rel="stylesheet" href="Cartesiano-x.css">
+  <link rel="stylesheet" href="../Cartesiano-I-IV/menu.css">
+  <!--- <link rel="stylesheet" href="Mov.Circular.css"> -->
+	<title>bVeo Physics</title>
+    <style>
+      body{
+        user-select: none;
+      }
+      .y-scrool{
+        height:200px ;
+        overflow-y: scroll;
+      }
+    </style>
+
+  </head>
+<body>
+	<nav>
+
+
+    <div class="nav-wrapper menu-padding">
+      <a href="#" class="brand-logo">Movimiento Circular</a>
+     <!--   <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>-->
+      <a  id='menu' href="#" data-activates="mobile-demo" class="button-collapse  " ><i class="material-icons">menu</i></a>      
+      <!-- Escritorio -->
+      <ul class="right hide-on-med-and-down">
+            <li><a href="#"><i class="material-icons">autorenew</i></a></li>
+            <li><a href="#"><i class="material-icons">info</i></a></li>
+            <li><a href="#"><i class="material-icons">copyright</i></a></li>       
+       
+      </ul>   
+
+      <!-- Móvil -->
+      <ul class="side-nav fixed" id="mobile-demo">
+            <div class="container">
+                <!-- Menú Velocidad -->
+                <div class= 'row menu-header '>
+                  <i class="material-icons">settings</i><div class='col s12 collapsible-header'>CONFIGURACIÓN</div>
+                </div>
+
+                <div class="divider"></div>
+                  <div class="row">
+              
+                    <div class=" col s12">
+                      <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header menu-item"> <i class="material-icons">trending_flat</i> <div>Vectores</div> </div>
+                              <div class="collapsible-body">
+                                                    
+                                <div class="switch menu-subitem">
+                                  <div>Posición</div>
+                                  <div>
+                                    <label>
+                                      
+                                      <input id = 'cb_posicion' type="checkbox" checked=false>
+                                      <span class="lever"></span>
+                                     
+                                    </label>
+                                  </div>  
+                                </div>
+                        
+                                     
+                                <div class="switch menu-subitem">
+                                  <div>V. tangencial</div>
+                                  <div>
+                                    <label>
+                                       
+                                      <input id='cb_velocidad' type="checkbox">
+                                      <span class="lever"></span>
+                                     
+                                    </label>
+                                  </div>
+                                </div>
+
+
+                                <div class="switch menu-subitem">
+                                <div>A. centrípeta</div>
+                                  <label>
+                                    
+                                    <input id = 'cb_aceleracion' type="checkbox">
+                                    <span class="lever"></span>
+                               
+                                  </label>
+                                </div>
+                   
+                                <div class='switch menu-subitem'>
+                                  <div>F. centrípeta</div>
+                                  <label>
+                                    <input id = 'cb_fuerzaCentripeta' type="checkbox" checked=true>
+                                    <span class="lever"></span>
+                                  </label>
+                                </div>       
+
+                                <div class="switch menu-subitem">
+                                  <div>Trayectoria</div>
+                                  <label>
+                                    <input id='cb_trayectoria' type="checkbox" checked=false>
+                                    <span class="lever"></span>
+                                  </label>
+                                </div>
+          
+
+                              </div>
+                        </li>
+
+                        <li>
+                          <div class="collapsible-header menu-item"> <i class="material-icons">place</i><div>Propiedades</div> </div>
+                        
+                              <div class="collapsible-body ">
+                                  <div class='row'>
+                                    <div class="col s12">
+                                      <div id="Periodo-T" ></div> 
+                                    </div>
+                                  </div> 
+
+                                  <div class="row">
+                                    <div class="col s12  menu-subitem ">
+                                      <i class="material-icons">access_time</i>
+                                      <div id='L-Periodo-T'  ></div>
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                     <div class="col s12"><div id="radio-E"></div></div> 
+                                  </div>
+                                  <div class="row">                          
+                                    <div  class="col s12  menu-subitem  ">
+                                      <i class="material-icons">straighten</i>
+                                      <div id='L-radio' class='menu-subitem' >radio</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                     <div class="col s12"><div id="masa-E"></div></div> 
+                                  </div>
+                                  <div class="row">                            
+                                    <div  class="col s12   menu-subitem ">
+                                      <i class="material-icons">fitness_center</i>
+                                      <div id='l-masa' class='menu-subitem' ></div>
+                                  </div>
+
+
+                              </div>
+                        </li>
+                        
+                      </ul>
+          
+                    </div>
+                  </div>
+            
+             
+
+       
+
+
+        		</div>
+      
+
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+  <!--contenedor principal -->    
+	<div id='contenedor-ejes'>
+	</div>
+
+  <div class="row menu-padding">
+    <div class="col s12 m10 offset-m1 l8 offset-l2">
+      <ul class="tabs">        
+        <li class="tab col s4"><a class="active"  href="#VECTORES">Vectores</a></li>
+        <li class="tab col s4"><a  href="#test2">Ecuación</a></li>
+
+       
+      </ul>
+    </div>
+    <div id="VECTORES" class="col s12 m10 offset-m1 l8 offset-l2 y-scrool">
+   
+    <ul id='vectores' class="collection ">
+      <li class="collection-item"><div class='menu-subitem cabezera'><div >Vector</div><div>Módulo</div></div></li>
+      <li class="collection-item"><div id='posicion' class='menu-subitem'><div >a</div><div >a</div></div></li>       
+      <li class="collection-item"><div id='velocidad' class='menu-subitem'><div ></div><div></div></div></li>    
+      <li class="collection-item active"><div id='a_centripeta' class='menu-subitem'><div ></div><div ></div></div></li>    
+      <li class="collection-item"><div id='f_centripeta' class='menu-subitem'><div ></div><div ></div></div></li> 
+      <!--  <li class="collection-item"><div id='f_centrifuga' class='menu-subitem'><div ></div><div ></div></div></li> -->
+    </ul>
+
+    </div>
+ 
+
+    <div id="test2" class="col s12 m10 offset-m1 l8 offset-l2">
+      <ul class="collection">
+      <li class="collection-item"><div class='menu-subitem cabezera'><div >Vector</div><div>Módulo</div></div></li>  
+      <li class="collection-item"><div class='menu-subitem '>r=rvcos(wt)i + rsin(wt)j</div></li>
+      <li class="collection-item"><div  class='menu-subitem'><div >a</div><div >a</div></div></li>       
+      <li class="collection-item"><div  class='menu-subitem'><div ></div><div></div></div></li>    
+      <li class="collection-item active"><div  class='menu-subitem'><div ></div><div ></div></div></li>    
+      <li class="collection-item"><div  class='menu-subitem'><div ></div><div ></div></div></li> 
+      <li class="collection-item"><div class='menu-subitem'><div ></div><div ></div></div></li> 
+          
+          
+          <!-- <li class="collection-item"> <div class='Datos'><div >Velociad</div><div >23(m/s)</div></div>   
+          </li>
+
+          <li class="collection-item active"><div class='Datos'>
+                                        <div >aceleración centripeta</div> <div >23(m/s^2)</div>
+                                      </div>
+          </li>
+         <li class="collection-item">aceleración centripeta = 23(m/s^2)</li>
+          <li class="collection-item">aceleración centrifuga = 23(m/s^2)</li>
+          <li class="collection-item">Período T = 4(m/s)</li>
+          <li class="collection-item">frecuencia f = 1/4(1/s)</li>
+          <li class="collection-item">Frecuencia angular w = 34(rad)</li>
+           -->
+      </ul>
+    </div>
+
+
+</body>
+<script>
+</script>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="../../js/nouislider.js"></script>
+<script src="../../js/materialize.js"></script>
+  <script>
+    (function init(){
+    var vectores=document.getElementById('vectores');
+   
+  
+    for (i=1; i<vectores.children.length;i++){
+      vectores.children[i].addEventListener('click',manejador);
+    
+    }
+    
+  })();
+
+  function manejador(event){
+    console.log(event.target.parentElement);
+   /* if ((event.target.parentElement.className == 'collection-item') || (event.target.parentElement.className == 'collection-item active'){
+      //k=event.target.textContent*1;
+     // var factores=document.getElementById('factores');
+     // for (i=1; i<8;i++){
+     // factores.children[i].className='waves-effect';
+    
+      if(event.target.parentElement.className == 'collection-item active'){
+          event.target.parentElement.className = 'collection-item';
+
+      }
+      else{
+        event.target.parentElement.className = 'collection-item active';
+      }
+
+      
+    }
+     
+    */
+    
+  } 
+  </script>
+<script src="../Vectores/Vector/Vector.js"></script>
+
+<script src="Cartesiano-x.js"></script>
+<script src="mov.circular.js"></script>
+<script src="init.js"></script>
+<script src="menu-movil.js"></script>
+
+	<script>
+		$( document ).ready(function(){ 
+			$(".button-collapse").sideNav({ menuWidth:260, closeOnClick: true, draggable:true});
+    
+      $('select').material_select();
+    
+      $('ul.tabs').tabs();
+		});
+
+    
+	</script>
+
+
+</html>
