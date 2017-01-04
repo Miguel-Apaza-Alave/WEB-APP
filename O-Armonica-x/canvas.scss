@@ -1,0 +1,41 @@
+	.margen-superior{
+		padding-top:4em;
+   
+	}
+
+
+
+		.centrar{
+			text-align:center;
+      color: salmon;	
+			margin:0 auto;
+      font-size:2rem;
+		}
+    .absoluto{
+      position:absolute;
+    }
+    .mcolor{
+      
+      display:block;
+      color: salmon;
+      text-align:center;
+    }
+    .titulo{
+      font-size:1rem;
+    }
+    .separador{
+      height:1px;
+      background:salmon;
+      color:salmon;
+    }
+    .titulo-menu-movil{
+      margin:0 auto;
+      font-size:1.5rem;
+      color:salmon;
+      height:3rem;
+      text-align:center;
+    }
+
+    span{
+      font:2rem;
+    }		

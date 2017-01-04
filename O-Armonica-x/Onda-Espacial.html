@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+  <link rel="stylesheet" href="../../../Cartesiano-I-IV/Cartesiano-I-IV.css">  
+  <link rel="stylesheet" href="canvas.css">
+	<link rel="stylesheet" href="../../../../css/materialize.css">
+  <link rel="stylesheet" href="../../../Cartesiano-I-IV/menu.css">
+	<link rel="stylesheet" href="../../../../iconfont/material-icons.css">
+  <link rel="stylesheet" href="../../../../css/nouislider.css">
+  <style>
+    .titulo{
+			font-size: 2em;
+			text-align: center;
+			/*margin:0 auto;*/
+		}	
+  </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper menu-padding">
+          <a href="#" class="brand-logo">Onda Armónica Espacial</a>
+          <a id='menu-movil'href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <!-- Escritorio -->
+          <ul class="right ">
+            <li><a href="#"><i class="material-icons">autorenew</i></a></li>
+            <li><a href="#"><i class="material-icons">info</i></a></li>
+            <li><a href="#"><i class="material-icons">copyright</i></a></li>
+          </ul>
+
+    <ul class="side-nav fixed " id="mobile-demo">
+         
+              <div class="container">
+                <div class= 'row menu-header '>
+                  <i class="material-icons">settings</i><div class='col s12 collapsible-header'>CONFIGURACIÓN</div>
+                </div>
+                <div class="row"><div class="divider col s12"></div></div>
+
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                      <div class="collapsible-header menu-item"> <i class="material-icons">place</i><div>Propiedades</div> </div>
+                         
+                          <!-- collapsible-body -->
+                          <div class="collapsible-body">
+                              <!--  -->
+                              <div class='row'>
+                                <div class="col s12">
+                                  <div id="Amplitud" ></div> 
+                                </div>
+                              </div> 
+
+                              <div class="row">
+                                <div class="col s12  menu-subitem ">
+                                  <i class="material-icons">font_download</i>
+                                  <div id= 'label-Amplitud'>mensaje</div>
+                                </div>
+                              </div>
+                              <!--  -->  
+
+                              <!--  -->
+                              <div class='row'>
+                                <div class="col s12">
+                                  <div id="Longitud-Onda" ></div> 
+                                </div>
+                              </div> 
+
+                              <div class="row">
+                                <div class="col s12  menu-subitem ">
+                                  <i class="material-icons">straighten</i>
+                                  <div  id='label-Longitud'>mensaje</div>
+                                </div>
+                              </div>
+                              <!--  -->
+
+
+                              <!--  -->
+                              <div class='row'>
+                                <div class="col s12">
+                                  <div id="Periodo-T" ></div> 
+                                </div>
+                              </div> 
+
+                              <div class="row">
+                                <div class="col s12  menu-subitem ">
+                                  <i class="material-icons">access_time</i>
+                                  <div  id='label-Periodo-T'>mensaje</div>
+                                </div>
+                              </div>
+                              <!--  -->
+
+
+
+                              <div class="row"><div class="divider col s12"></div></div>
+                            
+                          </div>
+                          <!-- fin collapsible-body -->  
+
+                    </li>          
+                </ul>    
+       
+              </div>            
+        </ul>
+
+
+          <!-- Móvil -->
+          <!--
+          <ul class="side-nav fixed" id="mobile-demo">
+            <li>
+                <div class="container">
+                  <div class="row">
+                    <div class="titulo-menu-movil col s12">
+                      Configuración
+                    </div>
+                  </div>
+
+                </div>
+                  
+              </li>
+                    
+
+              <li>
+                <div id ='elmenu' class="container">
+                    <div class="row">
+                      <div class="col s12">
+                          <div  id="Amplitud">                      
+                          </div> 
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class=" col s12">
+                        <div class="mcolor"  id="label-Amplitud"></div>
+                      </div> 
+                    </div>             
+                             
+                    <div class="row">
+                      <div class="col s12">
+                          <div  id="Longitud-Onda"></div>
+      				        </div>
+                    </div>
+                      	
+                    <div class="row">
+                     	<div class=" col s12">
+      					           <div class="mcolor"  id="label-Longitud"></div>
+                      </div> 
+                    </div>                             
+                    
+               
+                    <div class="row">
+                      <div class="col s12">
+                          <div  id="Periodo-T"></div>
+                      </div>    
+      			        </div>	
+
+                    <div class="row">
+                      <div class=" col s12">
+                        <div class="mcolor"  id="label-Periodo-T"></div>
+                      </div> 
+                    </div>
+                     
+                </div>
+            </li>
+          </ul>
+          <!- -->
+        </div>
+    </nav>
+
+  <div>
+    <br>
+  </div>
+
+  <div clas='menu-padding'>
+    <div class="container align-center">
+    <!-- <div class='titulo'>y = sin(kx-wt)</div> -->
+    </div>
+  </div>
+
+  <div id='contenedor-ejes' >
+  </div>
+
+
+
+  <div class='margen-superior container' >
+    <div class="container  hide-on-med-and-down">
+              <div class="row">
+                <div class="col s5 m5 l5">
+                    <div class="mcolor"  id="L-E-Amplitud">                                         
+                    </div>
+                </div>                
+                <div class="col s7 m7 l7">
+                    <div class="mcolor"  id="E-Amplitud">
+                    </div>                    
+                </div>  
+			        </div>	
+
+                <!--  -->
+
+              <div class='row'>  
+                <div class="col s5 m5 l5">
+                    <div class="mcolor"  id="L-E-Periodo-T">
+                    </div>                    
+                </div>                
+                <div class="col s7 m7 l7">
+                    <div  id="E-Periodo-T">                                           
+                    </div>
+                </div>
+    
+			        </div>	
+
+              <!--  -->
+
+              <div class="row">
+                <div class="col s5 m5 l5">
+                    <div class="mcolor"  id="L-E-Longitud">
+                    </div>                    
+                </div>                
+                <div class="col s7 m7 l7">
+                    <div  id="E-Longitud">                                           
+                    </div>
+                </div>
+    
+			        </div>
+              <!--  -->
+    </div>                                     
+  </div>           
+
+
+ 
+	<script src="../../../../js/jquery-2.1.1.min.js"></script>
+ 	<script src="../../../../js/nouislider.js"></script>
+	<script src="../../../../js/materialize.js"></script>
+  <!--
+  <script src="../../../DataView/DataView.js"></script>
+		 <script src="../../../canvas/canvas.js"></script> -->
+	<!--  <script src="../../../Vectores/Vector/Vector.js"></script>-->	
+	<!-- <script src="../../Onda/PlotOndaArmonica.js"></script>
+   -->
+	<script src="../../Onda/Onda-Armonica.js"></script>
+  <script src="../../../Cartesiano-I-IV/Cartesiano-I-IV.js"></script> 
+	
+	<script src="init.js"></script>
+  
+ <!--  <script src="menu-escritorio.js"></script>   -->
+
+  <script src="menu-movil.js"></script>
+
+  <script>
+   $(document).ready(function(){
+        $(".button-collapse").sideNav({ menuWidth:260, closeOnClick: true, draggable:true});
+   });
+</script> 
+</body>
+</html>
