@@ -1,0 +1,161 @@
+    $CONTENEDOR_EJES_ANCHO:90%;
+    $CONTENEDOR_EJES_MARGEN:100% - $CONTENEDOR_EJES_ANCHO; 
+    $CONTENEDOR_EJES_ALTO:300px;
+    $CONTENEDOR_TEXT_COLOR:#e57373;//rgba(255, 0, 0,1);
+
+    $CONTENEDOR_EJES_COLOR:#ef9a9a;//rgba(250, 128, 114,.7);
+    $CONTENEDOR_EJES_BACKCOLOR:white;	//rgba(239, 154, 154,.2);
+    $EJE_Y_ANCHO:64px;
+
+		body{
+			margin-left:0;
+			margin-right:0;
+
+		}
+
+		@media only screen and (max-width:992px){	
+			.contenedor-ejes{
+				
+				position:relative;
+				width:90%;
+				//margin-left:calc((100% - #{$CONTENEDOR_EJES_ANCHO})/2 );
+				background:$CONTENEDOR_EJES_BACKCOLOR;
+				color:$CONTENEDOR_TEXT_COLOR;
+				margin: 0 auto;
+			}
+		}	
+
+
+
+		
+		@media only screen and (min-width:991px){
+	 		.contenedor-ejes{
+   			    position:relative; 
+		        width:calc((90% - 260px ));//$CONTENEDOR_EJES_ANCHO;//No esta definida
+
+				position:relative;
+				color:$CONTENEDOR_TEXT_COLOR;
+				pointer-events:auto;			
+				margin-left:300px;
+			}
+	    }
+
+		.capa-y{
+			width:100%;
+			height:100%;
+			position: absolute;
+			display:flex;
+			flex-direction:column;
+			justify-content: center;
+
+		}
+
+		.capa-x{
+			position:absolute;
+			width:100%;
+			height:100%;
+			display:flex;
+			flex-direction:column;
+			justify-content: center;
+		
+		}
+		.capa-linea-y{
+			position:absolute;
+			width:100%;
+			height:100%;
+		}
+		.eje-y-caption{
+			width:$EJE_Y_ANCHO;
+			height:100%;
+			text-align:left;
+			box-shadow:-2px 0 0 0 $CONTENEDOR_EJES_COLOR inset;	
+		}
+		.eje-y{
+			width:$EJE_Y_ANCHO;
+			//height:calc(100% - 4em);
+			height:100%;
+			margin-left:0;
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+		}
+
+		.item-y{
+			height:1em;
+			display:flex;
+			justify-content:flex-end;
+			align-items:center;
+		}
+
+		.marca-y{
+			width:.5em;
+			height:2px;
+			background:$CONTENEDOR_EJES_COLOR;
+			align-self:center;
+		}
+
+		.eje-x{
+			/*padding-top:2em;*/
+			//width:calc(100% - 3em);
+			//width:calc(100% - #{$EJE_Y_ANCHO} );
+			height:4em;
+			display:flex;
+			align-items:flex-end;
+			justify-content:space-between;
+			margin-left:calc(#{$EJE_Y_ANCHO} - 8px);
+			//background:rgba(129, 152, 47,.3);
+			
+
+		}
+		.eje-x-caption{
+			width:100%;
+			height:1.5em;
+			text-align:right;
+			box-shadow:0 1px  $CONTENEDOR_EJES_COLOR,
+						0 -1px  $CONTENEDOR_EJES_COLOR inset;
+		}
+
+		.item-x{
+			width:1em;
+			height:2em;
+			display:flex;
+			justify-content:center;
+		}
+
+		.x{
+			display:flex ;
+			flex-direction:column;
+		}
+
+		.marca-x{
+			width:2px;
+			height:.5em;
+			background:$CONTENEDOR_EJES_COLOR;
+			margin:0 auto;
+		}
+
+		.capa-linea-x{
+			width:100%;
+			height:100%;
+			/*Agregada*/
+			position:absolute;
+			/**/
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+		}
+
+		.contenedor-linea-x{
+			height:3em;
+			width:calc(100% - #{$EJE_Y_ANCHO} - 8px);
+			display:flex;
+			flex-direction:column;
+			justify-content:flex-star;
+			margin-left:$EJE_Y_ANCHO;
+			//background:rgba(129, 152, 47,.4);
+		}
+
+		.Lienzo{
+			display:block;
+			position:relative;
+		}

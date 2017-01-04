@@ -1,0 +1,191 @@
+body {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .contenedor-ejes {
+    position: relative;
+    width: 90%;
+    background: white;
+    color: #e57373;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  .contenedor-ejes {
+    position: relative;
+    width: calc((90% - 260px ));
+    position: relative;
+    color: #e57373;
+    pointer-events: auto;
+    margin-left: 300px;
+  }
+}
+
+.capa-y {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.capa-x {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.capa-linea-y {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.eje-y-caption {
+  width: 64px;
+  height: 100%;
+  text-align: left;
+  box-shadow: -2px 0 0 0 #ef9a9a inset;
+}
+
+.eje-y {
+  width: 64px;
+  height: 100%;
+  margin-left: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.item-y {
+  height: 1em;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.marca-y {
+  width: .5em;
+  height: 2px;
+  background: #ef9a9a;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+
+.eje-x {
+  /*padding-top:2em;*/
+  height: 4em;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: calc(64px - 8px);
+}
+
+.eje-x-caption {
+  width: 100%;
+  height: 1.5em;
+  text-align: right;
+  box-shadow: 0 1px #ef9a9a, 0 -1px #ef9a9a inset;
+}
+
+.item-x {
+  width: 1em;
+  height: 2em;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.x {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.marca-x {
+  width: 2px;
+  height: .5em;
+  background: #ef9a9a;
+  margin: 0 auto;
+}
+
+.capa-linea-x {
+  width: 100%;
+  height: 100%;
+  /*Agregada*/
+  position: absolute;
+  /**/
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor-linea-x {
+  height: 3em;
+  width: calc(100% - 64px - 8px);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-star;
+      -ms-flex-pack: flex-star;
+          justify-content: flex-star;
+  margin-left: 64px;
+}
+
+.Lienzo {
+  display: block;
+  position: relative;
+}
