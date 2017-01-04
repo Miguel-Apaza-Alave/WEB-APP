@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+	<link rel="stylesheet" href="R2.css">
+	<link rel="stylesheet" href="../../css/materialize.css">
+	<link rel="stylesheet" href="../../iconfont/material-icons.css">					
+
+	<title>Document</title>
+	<style>
+		body{
+			margin-left:0;
+			margin-right:0;
+		}
+		.centrar{
+			text-align: center;
+			font-size: 32px;
+		}
+		.vectores{
+			font-size: 1.4em;
+		}
+
+		#suma_vectorial{
+			color:salmon;
+		}
+		#u1, #u0{
+			color:rgb(33, 150, 243);
+		}
+		.fontsize2{
+			font-size: 1em;
+		}
+
+	</style>
+</head>
+<body>
+
+
+<div id='contenedor-ejes'>
+				
+</div>
+<!--  <a  href="#!" class="secondary-content waves-effect waves-light btn round"><i class="material-icons">zoom_in</i></a>
+    		-->
+ <!--   		
+<div class='container'>
+	<div class="row">
+    	<div class="col s1">
+			<a href="#!" class="btn-floating btn-medium waves-effect waves-light "><i class="material-icons">zoom_out</i></a>    	
+    		
+    	</div>
+    	<div class="col s1">	
+    		<a href="#!" class="btn-floating btn-medium waves-effect waves-light "><i class="material-icons">zoom_in</i></a>
+    	</div>
+    	<div class="col s1">
+    	</div>
+    </div>	
+</div>
+-->  
+
+<div class='center-align'>
+	<h5>Álgebra Vectorial</h5>
+</div>
+
+<div class='container'>
+	<div class="row">
+    	<div class="col s12">
+	      <ul class="tabs">
+	        <li class="tab col s3"><a class="active " href="#test1" onclick='Vectores.Operacion.OperacionActual(0)'>Adición</a></li>
+	        <li class="tab col s3"><a  href="#test2" onclick='Vectores.Operacion.OperacionActual(1)'>Producto Punto</a></li>
+	        <!-- <li class="tab col s3 disabled"><a href="#test3">Disabled Tab</a></li> -->
+	        <li class="tab col s3"><a href="#test3" onclick='Vectores.Operacion.OperacionActual(2)'>Ponderación</a></li>
+	        <!-- <li class="tab col s3"><a href="#test4">Test 4</a></li> -->
+	      </ul>
+    	</div>
+    
+    <div id="test1" class="col s12">
+	  <ul class="collection">
+    <li class="collection-item avatar"><!-- <li class="collection-item avatar"> -->
+      <i class="material-icons circle blue">call_made</i>
+      <div class="vectores">
+      	<h6 id='u0'></h6>
+      	<h6 id='u1'></h6>
+      </div>
+      <a href="#!" class="secondary-content waves-effect btn " onclick='Sumar()'>Sumar</a>
+    </li>
+    <li class="collection-item avatar"> <!-- <li class="collection-item avatar"> -->
+      <i class="material-icons circle red">call_made</i>
+      <h6 id=suma_vectorial> Vector resultante</h6>     
+      <div id="suma"></div>
+      <a href="#!" class="secondary-content"></a>
+    </li>
+   
+  </ul>
+		</div>
+
+    </div>
+    
+
+    <div id="test2" class="col s12">
+		 <ul class="collection">
+		    <li class="collection-item avatar"><!-- <li class="collection-item avatar"> -->
+		      <i class="material-icons circle blue">call_made</i>
+		      <div class="vectores">
+		      	<h6 id='v0'></h6>
+		      	<h6 id='v1'></h6>
+		      </div>
+		   
+		    </li>
+		    <li class="collection-item avatar"> <!-- <li class="collection-item avatar"> -->
+		      <i class="material-icons circle red">call_made</i>
+		      <h6 id=suma_vectorial> PRoducto punto</h6>     
+		      <div id="ponderacion"></div>
+		      <a href="#!" class="secondary-content"></a>
+		    </li>
+		   
+		 </ul>		
+    </div>
+
+
+    <div id="test3" class="col s12">
+		<div class ='container '>
+		  <ul id='factores' class="pagination center-align">
+		  	<li class="disabled"><a href="#!">Factores</a></li>
+		    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+		    <li class="waves-effect"><a href="#!">0.25</a></li>
+		    <li class="waves-effect"><a href="#!">0.5</a></li>
+		    <li class="active"><a href="#!" >1.0</a></li>
+		    <li class="waves-effect"><a href="#!" >1.5</a></li>
+		    <li class="waves-effect"><a href="#!">2.0 </a></li>
+		    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+		  </ul>
+		</div>
+    </div>
+   
+  </div>
+</div>
+
+
+</script>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="../../js/materialize.js"></script>
+<script>
+	$(document).ready(function(){
+    	$('ul.tabs').tabs();
+
+  	});
+
+  
+</script>
+<script src="../Vectores/Vector/Vector.js"></script>
+<script src="init.js"></script>
+<script src="R2.js"></script>
+<script>
+	(function init(){
+		var factores=document.getElementById('factores');
+		for (i=1; i<8;i++){
+		factores.children[i].firstElementChild.addEventListener('click',manejador);
+		}
+		
+	})();
+
+	function manejador(event){
+	
+		if (Vectores.Operacion.OperacionActual() == 2){
+			k=event.target.textContent*1;
+			var factores=document.getElementById('factores');
+			for (i=1; i<8;i++){
+			factores.children[i].className='waves-effect';
+		
+			event.target.parentElement.className='active';
+			}
+		}
+
+		
+	}	
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+body {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.contenedor-ejes {
+  margin: 16px auto;
+  width: 90%;
+  position: relative;
+  background: rgba(255, 255, 0, 0.15);
+  /*box-shadow:2px 2px red,
+					  -2px -2px red;
+			*/
+}
+
+.capa-abscisas {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(100% - 2*16px);
+  height: calc(100% - 2*16px);
+  margin: 16px 16px;
+}
+
+.item-abscisa {
+  width: 2px;
+  background: rgba(255, 79, 0, 0.2);
+}
+
+.capa-ordenadas {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(100% - 2*16px);
+  margin-left: 16px;
+  margin-top: 16px;
+  height: calc( 100% - 2*16px);
+}
+
+.item-ordenada {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 79, 0, 0.2);
+}
+
+.capa-eje-x {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.eje-x {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - .5*24px);
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 6px;
+  height: 40px;
+}
+
+.x {
+  width: 24px;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.capa-eje-y {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.eje-y {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 4.2em;
+  height: calc(100% - 16px);
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 8px;
+}
+
+.y {
+  width: 26px;
+  height: 16px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.capa-lienzo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /*box-shadow:1px 1px blue,
+					  -1px -1px blue;*/
+  border: 1px solid white;
+}
+
+.lienzo {
+  display: block;
+  /*box-shadow:1px  1px cyan,
+					  -1px -1px cyan;
+					  */
+  margin: 16px auto;
+}
