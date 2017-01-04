@@ -1,0 +1,62 @@
+    .configuracion{
+          color:rgb(110, 117, 127);
+          font-weight: bold;
+          font-size: 1.2rem;
+          justify-content:space-between; 
+          display:flex;
+    }
+
+
+    .dato{
+      justify-content:space-between; 
+      display:flex;
+      font-size: 1em;
+      font-weight: bold;
+      /*display:table;*/
+      color:rgb(158, 158, 158);
+     /* float:left;*/
+   
+    }
+
+ 
+    .Datos{
+       justify-content:space-between; 
+      display:flex;
+      color:rgb(158, 158, 158);
+      font-size: 0.8rem;
+    }
+    
+    .mymenu{
+     
+      padding-left: 0;
+      padding-right: 0;
+      color:rgb(158, 158, 158);
+      font-size: 0.8rem;
+    }
+   
+
+    .cabezera{
+      color: rgb(229, 115, 115);
+      font-weight: bold;
+
+    }
+    .no-event{
+      pointer-events:none;
+    }
+
+    .padin{
+      padding-left: 260px;
+    }  
+
+    .marg{
+      margin-left: 250px;
+    }
+    @media only screen and (max-width:992px){
+        .padin{
+          padding-left: 0;
+        }
+        .marg{
+         margin-left: 0px;
+        }
+    }
+

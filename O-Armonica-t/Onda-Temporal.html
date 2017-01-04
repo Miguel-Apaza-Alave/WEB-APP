@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+
+  <link rel="stylesheet" href="../../../Cartesiano-I-IV/Cartesiano-I-IV.css">
+  <link rel="stylesheet" href="canvas.css">
+  <link rel="stylesheet" href="../../../../css/materialize.css">
+  <link rel="stylesheet" href="../../../../iconfont/material-icons.css">
+  <link rel="stylesheet" href="../../../../css/nouislider.css">
+  <link rel="stylesheet" href="../../../Cartesiano-I-IV/Menu.css">
+	
+</head>
+<body >
+	<nav>
+	    <div class="nav-wrapper menu-padding">
+		     <a href="#" class="brand-logo">Onda Armónica Temporal</a>
+		     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		      <!-- Escritorio -->
+          <ul class="right"> 
+		     <!-- <ul class="right hide-on-med-and-down">  -->
+		       <!--  <li><a  href="#">Apuntes</a></li> -->
+		        <li><a href="#"><i class="material-icons">autorenew</i></a></li>
+            <li><a href="#"><i class="material-icons">info</i></a></li>
+            <li><a href="#"><i class="material-icons">copyright</i></a></li>
+            <!-- <li><a href="#"><i class="material-icons">home</i></a></li> -->
+		     </ul>
+		      <!-- Móvil -->
+		     <ul class="side-nav fixed" id="mobile-demo">
+		        <li>
+               		<div class="container">
+		                <div class= 'row menu-header '>
+		                  <i class="material-icons">settings</i><div class='col s12 collapsible-header'>CONFIGURACIÓN</div>
+		                </div>
+
+		                <div class="divider"></div>
+               
+              		</div>
+		           		              
+		        </li>
+                <ul class="collapsible" data-collapsible="accordion">						
+										<li>
+											<div class="collapsible-header menu-item"> <i class="material-icons">place</i><div>Propiedades</div> </div>
+                         
+                          <!-- collapsible-body -->
+                          <div class="collapsible-body">
+                              <!--  -->
+                              <div class='row'>
+                                <div class="col s12">
+                                  <div id="Amplitud" ></div> 
+                                </div>
+                              </div> 
+
+                              <div class="row">
+                                <div class="col s12  menu-subitem ">
+                                  <i class="material-icons">font_download</i>
+                                  <div id='L-Amplitud'>mensaje</div>
+                                </div>
+                              </div>
+                              <!--  -->  
+
+                              <div class="row"><div class="divider col s12"></div></div>
+ <!--  -->
+                              <div class='row'>
+                                <div class="col s12">
+                                  <div id="Periodo-T" ></div> 
+                                </div>
+                              </div> 
+
+                              <div class="row">
+                                <div class="col s12  menu-subitem ">
+                                  <i class="material-icons">access_time</i>
+                                  <div id='L-Periodo-T'>mensaje</div>
+                                </div>
+                              </div>                            
+
+
+                              <div class="row"><div class="divider col s12"></div></div>
+ <!--  
+                              <div class='row'>
+                                <div class="col s12">
+                                  <div id="frecuencia" ></div> 
+                                </div>
+                              </div> 
+
+                              <div class="row">
+                                <div class="col s12  menu-subitem ">
+                                  <i class="material-icons">access_time</i>
+                                  <div id='l-frecuencia'>frecuencia</div>
+                                </div>
+                              </div>     
+-->
+
+                          </div>
+                          <!-- fin collapsible-body -->  
+                    </li>
+
+								</ul>			
+
+	      	 </ul>
+	    </div>
+	</nav>
+
+	
+
+<!-- **********************  -->
+	<div>
+		<br><br>
+	</div>
+
+	<div id='contenedor-ejes' >
+	</div>
+	<div><br></div>
+
+	
+
+	<script src="../../../../js/jquery-2.1.1.min.js"></script>
+ 	<script src="../../../../js/nouislider.js"></script>
+	<script src="../../../../js/materialize.js"></script>
+
+	<script src="../../Onda/Onda-Armonica.js"></script>
+	<script src="../../../Cartesiano-I-IV/Cartesiano-I-IV.js"></script>	
+	<script src="init.js"></script>
+     <script src="menu-movil.js"></script>
+	<script>
+	 $(document).ready(function(){
+	        $(".button-collapse").sideNav({ menuWidth:260, closeOnClick: true, draggable:true});
+	 });
+	</script> 
+	</body>
+	</html>
