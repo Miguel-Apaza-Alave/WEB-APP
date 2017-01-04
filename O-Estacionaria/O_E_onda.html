@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+  <html lang="es">
+  <head>
+	 <meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	 <link rel="stylesheet" href="../../../css/materialize.css">
+	 <link rel="stylesheet" href="../../../iconfont/material-icons.css">
+   <link rel="stylesheet" href="../../../css/nouislider.css">
+	   <link rel="stylesheet" href="../../Cartesiano - X/Cartesiano-x.css">
+     <link rel="stylesheet" href="Mov.Circular.css">
+   
+   <link rel="stylesheet" href="canvas.css">
+    <!-- <link rel="stylesheet" href="../../canvas/canvas.css"> -->
+    <style>
+      body{
+        user-select: none;
+      }
+      .micolor{
+        color: white;
+      }
+    </style>    
+  <title>Document</title>
+
+  <script>
+
+  </script>	
+</head>
+  <body>
+    <nav>
+      <div class="nav-wrapper padin">
+        <a href="#" class="brand-logo">Onda Estacionaria</a>
+        <a id='menu-movil' href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <!-- Escritorio <ul class="right hide-on-med-and-down"> -->
+        <ul class="right ">
+         
+          <li><i class="material-icons">replay</i><a href="#">Fórmulas</a></li>
+        </ul>
+      <!-- Escritorio -->
+
+
+        <!-- Móvil -->
+        <ul class="side-nav fixed " id="mobile-demo">
+         
+              <div class="container">
+                <div class= 'row configuracion '>
+                  <i class="material-icons">settings</i><div class='col s12 collapsible-header'>CONFIGURACIÓN</div>
+                </div>
+                <div class="row"><div class="divider col s12"></div></div>
+
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                      <div class="collapsible-header dato"> <i class="material-icons">build</i><div>Propiedades</div> </div>
+                         
+                          <!-- collapsible-body -->
+                          <div class="collapsible-body">
+                              <!--  -->
+                              <div class='row'>
+                                <div class="col s12">
+                                  <div id="Tension" ></div> 
+                                </div>
+                              </div> 
+
+                              <div class="row">
+                                <div class="col s12  dato ">
+                                  <i class="material-icons">access_time</i>
+                                  <div id='label-Tension'  ></div>
+                                </div>
+                              </div>
+                              <!--  -->  
+
+                                 <!-- <div class="row"><div class="divider col s12"></div></div>-->
+                              
+                              <!--  -->
+                              <div class="row">
+                                 <div class="col s12"><div id="Densidad"></div></div> 
+                              </div>
+
+                              <div class="row">                          
+                                <div  class="col s12  dato  ">
+                                  <i class="material-icons">straighten</i>
+                                  <div id='label-Densidad' class='dato' >radio</div>
+                                </div>
+                              </div>
+                              <!--  -->
+
+                              <!--<div class="row"><div class="divider col s12"></div></div> -->
+                              
+                              <!--  -->
+                              <div class="row">
+                                 <div class="col s12"><div id="N"></div></div> 
+                              </div>
+                              <div class="row">                            
+                                <div  class="col s12   dato ">
+                                  <i class="material-icons">straighten</i>
+                                  <div id='label-N' class='dato' ></div>
+                              </div>
+                              <!--  -->
+
+                          </div>
+                          <!-- fin collapsible-body -->  
+
+                    </li>          
+                </ul>    
+       
+              </div>            
+        </ul>
+        <!-- Móvil -->
+
+
+      </div>
+    </nav>
+
+
+<!--  -->
+
+  <div id='contenedor-ejes' >
+  </div>
+
+
+    <div class="centrar padin" id="Armonico" >
+    </div> 
+
+      
+    <script src="../../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../../js/nouislider.js"></script>
+    <script src="../../../js/materialize.js"></script>
+    <!--<script src="../../DataView/DataView.js"></script>-->
+	  <script src="../../Vectores/Vector/Vector.js"></script>
+
+    
+    <script src="../../Cartesiano - X/Cartesiano-x.js"></script>
+    
+    <!-- <script src="../../Ondas/Onda/Onda.js"></script>
+     -->
+	  <script src="OndaEstacionaria.js"></script>
+    
+    <!-- Fichero del programa -->
+	  <script src="init.js"></script>
+    
+     <!-- <script src="menuEscritorio.js"></script>-->
+    <script src="menuMovil.js"></script>
+ 
+    <script>
+      $(document).ready(function(){
+         $(".button-collapse").sideNav({ menuWidth:260, closeOnClick: true, draggable:true});
+      });
+    </script>   
+  </body>
+  </html>
